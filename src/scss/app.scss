@@ -1,0 +1,24 @@
+@import "fonts";
+@import "/src/scss/variables";
+@import "libs/normalize";
+
+@import "components/all";
+
+.wrapper {
+    width: calc(100vw - 100px);
+    height: 100%;
+    background: $white;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.content {
+    // margin-bottom: 60px;
+}

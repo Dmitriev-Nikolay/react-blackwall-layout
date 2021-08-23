@@ -1,0 +1,44 @@
+@import "/src/scss/variables";
+@import "/src/scss/libs/mixins";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__main-block {
+        display: flex;
+        gap: 110px;
+
+        a {
+            @include font-base(("Inter-Regular", sans-serif), 18px, normal, 500, 20px, left, $blue);
+            cursor: pointer;
+            transition: background-color 0.1s ease-in-out;
+            transition: 0.5s;
+            padding: 5px 10px;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: lighten($blue, 64%);
+                -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: translate(1px, 1px);
+            }
+        }
+    }
+
+    &__sign-in-block {
+        display: flex;
+    }
+}

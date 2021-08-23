@@ -1,0 +1,26 @@
+@import "/src/scss/variables";
+@import "/src/scss/libs/mixins";
+
+.button {
+    @include font-base(("Inter-Regular", sans-serif), 17px, normal, 500, 20px, center, $blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 27px;
+    border: none;
+    border-radius: 6px;
+    min-width: 136px;
+    background: $white;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+    &:hover {
+        background: $blue;
+        color: $white;
+    }
+
+    &:active {
+        transform: translate(1px, 1px);
+        background-color: darken($blue, 8%);
+    }
+}
