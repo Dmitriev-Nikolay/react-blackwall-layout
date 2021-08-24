@@ -102,6 +102,7 @@ const BurgerBtnMenu = styled.button`
         border-style: none;
         cursor: pointer;
         color: #18216D;
+        background: #fff;
 
         &:active {
             transform: translate(1px, 1px);
