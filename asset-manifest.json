@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-blackwall-layout/static/css/main.4114ae42.chunk.css",
-    "main.js": "/react-blackwall-layout/static/js/main.5640f3f1.chunk.js",
-    "main.js.map": "/react-blackwall-layout/static/js/main.5640f3f1.chunk.js.map",
+    "main.js": "/react-blackwall-layout/static/js/main.0d8e44ef.chunk.js",
+    "main.js.map": "/react-blackwall-layout/static/js/main.0d8e44ef.chunk.js.map",
     "runtime-main.js": "/react-blackwall-layout/static/js/runtime-main.c89d7d39.js",
     "runtime-main.js.map": "/react-blackwall-layout/static/js/runtime-main.c89d7d39.js.map",
     "static/js/2.50a4b8d2.chunk.js": "/react-blackwall-layout/static/js/2.50a4b8d2.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.c89d7d39.js",
     "static/js/2.50a4b8d2.chunk.js",
     "static/css/main.4114ae42.chunk.css",
-    "static/js/main.5640f3f1.chunk.js"
+    "static/js/main.0d8e44ef.chunk.js"
   ]
 }
