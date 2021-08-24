@@ -19,6 +19,9 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     color: $black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: url("../../assets/img/ellipse.png") no-repeat;
 }
 
 a,

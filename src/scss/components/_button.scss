@@ -2,7 +2,7 @@
 @import "/src/scss/libs/mixins";
 
 .button {
-    @include font-base(("Inter-Regular", sans-serif), 17px, normal, 500, 20px, center, $blue);
+    @include font-base(("Inter-Regular", sans-serif), 17px, normal, 500, 20px, center);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,5 +22,29 @@
     &:active {
         transform: translate(1px, 1px);
         background-color: darken($blue, 8%);
+    }
+}
+
+.button + .button {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1201px) {
+    .button {
+        @include font-base(("Inter-Regular", sans-serif), 14px, normal, 500, 17px, center);
+        padding: 12px 20px;
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .button {
+        @include font-base(("Inter-Regular", sans-serif), 12px, normal, 500, 14px, center);
+        padding: 9px 16px;
+        min-width: 80px;
+    }
+
+    .button + .button {
+        margin-left: 7px;
     }
 }

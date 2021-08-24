@@ -3,14 +3,22 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
+    justify-content: center;
+    margin-bottom: 25px;
+
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1400px;
+        padding: 25px 0;
+    }
 
     &__navigation {
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap: 40px;
     }
 
     &__main-block {
@@ -18,7 +26,7 @@
         gap: 110px;
 
         a {
-            @include font-base(("Inter-Regular", sans-serif), 18px, normal, 500, 20px, left, $blue);
+            @include font-base(("Inter-Regular", sans-serif), 18px, normal, 500, 20px, left);
             cursor: pointer;
             transition: background-color 0.1s ease-in-out;
             transition: 0.5s;
@@ -40,5 +48,65 @@
 
     &__sign-in-block {
         display: flex;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1201px) {
+    .header {
+        &__navigation {
+            gap: 25px;
+        }
+
+        &__main-block {
+            gap: 95px;
+
+            a {
+                @include font-base(("Inter-Regular", sans-serif), 14px, normal, 500, 17px, left);
+                padding: 3px 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .header {
+        &__navigation {
+            gap: 18px;
+        }
+
+        &__logo {
+            width: 85px;
+            height: 26px;
+        }
+
+        &__main-block {
+            gap: 75px;
+
+            a {
+                @include font-base(("Inter-Regular", sans-serif), 12px, normal, 500, 15px, left);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .header {
+        margin-bottom: 45px;
+
+        &__navigation {
+            display: none;
+        }
+
+        &__sign-in-block {
+            display: none;
+        }
+
+        .burger-menu {
+            display: block;
+        }
     }
 }

@@ -1,7 +1,7 @@
 import Header from './Header';
-import Footer from './Footer';
+import BurgerMenu from './BurgerMenu';
 
 export {
     Header,
-    Footer,
+    BurgerMenu,
 };

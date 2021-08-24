@@ -7,18 +7,507 @@
 .wrapper {
     width: calc(100vw - 100px);
     height: 100%;
-    background: $white;
     margin: 0 auto;
     max-width: 1600px;
 }
 
-.container {
-    max-width: 1140px;
-    padding: 10px;
+.content {
+    max-width: 1180px;
     margin: 0 auto;
-    border: 1px solid black;
 }
 
-.content {
-    // margin-bottom: 60px;
+.container {
+    max-width: 1180px;
+    padding: 0 20px;
+}
+
+.start-block {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 130px;
+    background: url("../assets/img/main-bg.png") no-repeat;
+    height: 518px;
+    width: 100%;
+    background-position: right;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        @include font-base(("Inter-Regular", sans-serif), 48px, normal, 600, 60px, left);
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        @include font-base(("Inter-Regular", sans-serif), 17px, normal, 400, 28px, left);
+        margin-bottom: 34px;
+        max-width: 484px;
+    }
+
+    &__btn {
+        @include font-base(("Inter-Regular", sans-serif), 17px, normal, 500, 21px, center);
+        padding: 23px 38px;
+        min-width: 180px;
+        background: $btn-background;
+    }
+
+    &__img-container {
+        display: none;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &__text {
+        max-width: 490px;
+
+        h2 {
+            @include font-base(("Inter-Regular", sans-serif), 36px, normal, 600, 50px, left);
+        }
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 93px;
+    }
+
+    &__active-downloads {
+        .value-stats {
+            @include font-base(("Inter-Regular", sans-serif), 60px, normal, 700, 70px, left);
+            margin-bottom: 10px;
+        }
+
+        .grade-icons {
+            margin-bottom: 10px;
+
+            img + img {
+                margin-left: 5px;
+            }
+        }
+
+        div {
+            @include font-base(("Inter-Regular", sans-serif), 16px, normal, 400, 28px, left);
+        }
+    }
+
+    &__rating {
+        @extend .info-block__active-downloads;
+    }
+}
+
+.company-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 131px;
+
+    img {
+        transition: 0.5s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    img + img {
+        margin-left: 80px;
+    }
+}
+
+.features-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    &__desc {
+        margin-bottom: 48px;
+
+        h2 {
+            @include font-base(("Inter-Regular", sans-serif), 48px, normal, 600, 64px, center);
+            margin-bottom: 12px;
+        }
+
+        div {
+            @include font-base(("Inter-Regular", sans-serif), 16px, normal, 400, 30px, center);
+            max-width: 542px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 80px;
+
+        .list-item {
+            max-width: 320px;
+
+            .item-icon {
+                margin-bottom: 28px;
+            }
+
+            .item-title {
+                @include font-base(("Inter-Regular", sans-serif), 24px, normal, 600, 29px, left);
+                margin-bottom: 14px;
+            }
+
+            .item-text {
+                @include font-base(("Inter-Regular", sans-serif), 16px, normal, 400, 26px, left);
+                margin-bottom: 30px;
+                opacity: 0.8;
+            }
+
+            .item-more {
+                @include font-base(("Inter-Regular", sans-serif), 20px, normal, 600, 16px, left);
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 0 10px 5px rgb(24 33 109 / 10%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1201px) {
+    .start-block {
+        background-size: 65% auto;
+
+        &__title {
+            @include font-base(("Inter-Regular", sans-serif), 38px, normal, 600, 52px, left);
+            margin-bottom: 14px;
+        }
+
+        &__text {
+            @include font-base(("Inter-Regular", sans-serif), 15px, normal, 400, 24px, left);
+            margin-bottom: 28px;
+            max-width: 484px;
+        }
+
+        &__btn {
+            @include font-base(("Inter-Regular", sans-serif), 15px, normal, 500, 18px, center);
+            padding: 18px 32px;
+            min-width: 150px;
+        }
+    }
+
+    .info-block {
+        margin-bottom: 40px;
+
+        &__text {
+            max-width: 490px;
+
+            h2 {
+                @include font-base(("Inter-Regular", sans-serif), 32px, normal, 600, 38px, left);
+            }
+        }
+
+        &__stats {
+            gap: 78px;
+        }
+
+        &__active-downloads {
+            .value-stats {
+                @include font-base(("Inter-Regular", sans-serif), 48px, normal, 700, 60px, left);
+                margin-bottom: 10px;
+            }
+
+            div {
+                @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 24px, left);
+            }
+        }
+
+        &__rating {
+            @extend .info-block__active-downloads;
+        }
+    }
+
+    .company-block {
+        margin-bottom: 115px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        img + img {
+            margin: 0;
+        }
+    }
+
+    .features-block {
+        &__desc {
+            margin-bottom: 40px;
+
+            h2 {
+                @include font-base(("Inter-Regular", sans-serif), 38px, normal, 600, 52px, center);
+                margin-bottom: 10px;
+            }
+
+            div {
+                @include font-base(("Inter-Regular", sans-serif), 15px, normal, 400, 24px, center);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .start-block {
+        margin-bottom: 60px;
+        background-size: 55% auto;
+
+        &__title {
+            @include font-base(("Inter-Regular", sans-serif), 30px, normal, 600, 44px, left);
+            margin-bottom: 14px;
+        }
+
+        &__text {
+            @include font-base(("Inter-Regular", sans-serif), 12px, normal, 400, 19px, left);
+            margin-bottom: 28px;
+            max-width: 484px;
+        }
+
+        &__btn {
+            @include font-base(("Inter-Regular", sans-serif), 12px, normal, 500, 15px, center);
+            padding: 14px 28px;
+            min-width: 120px;
+        }
+    }
+
+    .info-block {
+        margin-bottom: 55px;
+        flex-direction: column;
+
+        &__text {
+            max-width: 490px;
+
+            h2 {
+                @include font-base(("Inter-Regular", sans-serif), 30px, normal, 600, 44px, left);
+                margin-bottom: 25px;
+            }
+        }
+
+        &__stats {
+            gap: 86px;
+        }
+    }
+
+    .features-block {
+        &__desc {
+            margin-bottom: 50px;
+
+            h2 {
+                @include font-base(("Inter-Regular", sans-serif), 30px, normal, 600, 44px, center);
+                margin-bottom: 14px;
+            }
+
+            div {
+                @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 20px, center);
+            }
+        }
+
+        &__list {
+            gap: 46px;
+
+            .list-item {
+                max-width: 320px;
+
+                .item-icon {
+                    margin-bottom: 20px;
+                }
+
+                .item-title {
+                    @include font-base(("Inter-Regular", sans-serif), 18px, normal, 600, 22px, left);
+                    margin-bottom: 12px;
+                }
+
+                .item-text {
+                    @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 20px, left);
+                    margin-bottom: 24px;
+                }
+
+                .item-more {
+                    @include font-base(("Inter-Regular", sans-serif), 16px, normal, 600, 14px, left);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    body {
+        background-size: 85% auto;
+    }
+
+    .start-block {
+        margin-bottom: 60px;
+        background: none;
+        grid-template-columns: 1fr;
+        height: auto;
+
+        &__img-container {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__inner {
+            align-items: center;
+            margin-bottom: 41px;
+        }
+
+        &__title {
+            @include font-base(("Inter-Regular", sans-serif), 28px, normal, 600, 27px, center);
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 20px, center);
+            margin-bottom: 33px;
+        }
+
+        &__btn {
+            @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 17px, center);
+            padding: 12px 17px;
+            min-width: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .wrapper {
+        width: calc(100vw - 40px);
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .start-block {
+        &__text {
+            padding: 0 10px;
+        }
+    }
+
+    .info-block {
+        margin-bottom: 22px;
+
+        &__text {
+            max-width: 490px;
+
+            h2 {
+                @include font-base(("Inter-Regular", sans-serif), 20px, normal, 600, 30px, left);
+                margin-bottom: 22px;
+            }
+        }
+
+        &__stats {
+            gap: 30px;
+        }
+
+        .value-stats {
+            @include font-base(("Inter-Regular", sans-serif), 30px, normal, 700, 40px, center);
+            margin-bottom: 12px;
+        }
+
+        .grade-icons {
+            img {
+                width: 10px;
+                height: auto;
+            }
+
+            img + img {
+                margin-left: 3px;
+            }
+        }
+
+        div {
+            @include font-base(("Inter-Regular", sans-serif), 8px, normal, 400, 14px, center);
+        }
+    }
+
+    .company-block {
+        display: flex;
+        margin-bottom: 50px;
+        gap: 35px;
+
+        img {
+            width: 52px;
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: none;
+            }
+        }
+    }
+
+    .features-block {
+        &__desc {
+            margin-bottom: 40px;
+
+            h2 {
+                @include font-base(("Inter-Regular", sans-serif), 24px, normal, 600, 24px, center);
+
+                &::after {
+                    content: "We are familiar with offline speed dating flow so we designed out online platform.";
+                    @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 20px, center);
+                    display: block;
+                    margin-top: 12px;
+                    opacity: 0.8;
+                }
+            }
+
+            div {
+                @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 20px, center);
+                display: none;
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+
+            .list-item {
+                .item-icon {
+                    max-width: 48px;
+                    height: auto;
+                }
+
+                .item-title {
+                    @include font-base(("Inter-Regular", sans-serif), 20px, normal, 600, 24px, left);
+                    margin-bottom: 12px;
+                }
+
+                .item-text {
+                    @include font-base(("Inter-Regular", sans-serif), 14px, normal, 400, 24px, left);
+                    margin-bottom: 20px;
+                }
+
+                .item-more {
+                    @include font-base(("Inter-Regular", sans-serif), 20px, normal, 500, 16px, left);
+                }
+            }
+        }
+    }
 }

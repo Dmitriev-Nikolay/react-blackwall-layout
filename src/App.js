@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Footer } from './components';
+import { Header } from './components';
 import { Home } from './pages';
 
 const App = () => {
@@ -8,7 +8,6 @@ const App = () => {
     <div className="wrapper">
       <Header />
       <Home />
-      <Footer />
     </div>
   );
 };
